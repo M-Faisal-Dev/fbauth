@@ -1,8 +1,8 @@
-import NextAuth from 'next-auth';
+import NextAuth, {AuthOptions} from 'next-auth';
 import FacebookProvider from 'next-auth/providers/facebook';
 
 
-export const authOptions = {
+export const authOptions : AuthOptions  = {
     providers: [
         FacebookProvider({
           clientId: "521912833091319",
@@ -10,7 +10,3 @@ export const authOptions = {
         }),
     ],
 }
-// 9af45af687df32af1ebdeb6b60bc3c35
-
-const handler = NextAuth(authOptions);
-export {handler as GET, handler as POST}
